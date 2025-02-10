@@ -1,0 +1,177 @@
+/* blog.css */
+
+/* Blog Hero Section */
+#blog-hero {
+  padding: 100px 0 80px;
+  background: url('../images/blog-hero.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: var(--hero-text-color, #fff);
+}
+#blog-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--hero-text-color, #fff);
+}
+#blog-hero p {
+  font-size: 1.2rem;
+  color: var(--hero-text-color, #fff);
+}
+
+/* Featured Articles Section */
+/* Featured Articles Slider Styles */
+.featured-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+}
+.featured-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.featured-slide {
+  flex: 0 0 80%;  /* Each slide takes up 80% of the container width */
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.featured-slide:hover {
+  transform: scale(1.02);
+}
+
+/* Slide image styling */
+.featured-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay for slide content */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  color: var(--hero-text-color, #fff);
+  padding: 1rem;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.featured-slide:hover .slide-content {
+  opacity: 1;
+}
+
+/* Headings and text inside slides */
+.slide-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.slide-content p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  /* If you want white text on overlay, you can use var(--hero-text-color, #fff) or choose another variable */
+  color: var(--background-color);
+}
+.slide-content .read-more {
+  color: var(--primary-color);
+  background: var(--background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.slide-content .read-more:hover {
+  background: var(--hover-color);
+  color: var(--background-color);
+}
+
+/* Latest Articles Grid Section */
+#latest-articles {
+  padding: 60px 0;
+  background: var(--background-color);
+  text-align: center;
+}
+#latest-articles h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.article-card {
+  background: var(--secondary-color);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+}
+.article-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.article-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.article-card p {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  margin-bottom: 1rem;
+}
+.article-card .read-more {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.article-card .read-more:hover {
+  color: var(--hover-color);
+}
+
+/* Newsletter Subscription Section */
+#blog-newsletter {
+  padding: 60px 0;
+  background: var(--secondary-color);
+  text-align: center;
+}
+#blog-newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+#blog-newsletter p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted-text);
+}
+#blog-newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#blog-newsletter form input[type="email"] {
+  padding: 0.75rem;
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}

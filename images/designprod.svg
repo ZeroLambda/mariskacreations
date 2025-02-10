@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Pencil for creative design -->
+  <path d="M16 48l28-28 4 4-28 28-8 2 2-8z" />
+  <line x1="18" y1="50" x2="22" y2="54" />
+  
+  <!-- Ruler for precision -->
+  <rect x="34" y="10" width="6" height="24" transform="rotate(45 37 22)" />
+  <line x1="36" y1="12" x2="38" y2="14" />
+  <line x1="38" y1="14" x2="40" y2="16" />
+  <line x1="40" y1="16" x2="42" y2="18" />
+  
+  <!-- Circular arrow for feedback loop -->
+  <path d="M50 32c0 9.9-8.1 18-18 18s-18-8.1-18-18" />
+  <polyline points="16,34 14,32 16,30" />
+</svg>

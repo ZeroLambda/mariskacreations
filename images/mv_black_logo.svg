@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="370px" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css"><![CDATA[
+    /* Rotate the globe continuously */
+    .rotate {
+      transform-origin: 150px 150px;
+      animation: rotateGlobe 15s linear infinite;
+    }
+    @keyframes rotateGlobe {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    /* "MC" text: fade in with a slight pop */
+    .logo-text {
+      opacity: 0;
+      animation: fadeInText 1.5s ease-out forwards 1s;
+      font-family: 'Bebas Neue', sans-serif;
+      fill: #e91e63;
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    /* Brand name along the arc: bold, thick, and large (48px) */
+    .brand-name {
+      opacity: 0;
+      animation: fadeInBrand 1.5s ease-out forwards 2s;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      font-size: 48px;
+    }
+    @keyframes fadeInBrand {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  ]]></style>
+  <defs>
+    <!-- Gradient for the brand name text (glossy metallic white effect) -->
+    <linearGradient id="brandGradientBlack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+    <!-- Arc path for the brand name.
+         This arc is based on a circle centered at (150,150) with a radius of 130.
+         It runs from (20,150) to (280,150), so its topmost point is at (150,20),
+         placing the text along the top of the globe. -->
+    <path id="brandArcBlack" d="M 20,150 A 130,130 0 0,1 280,150" fill="none"/>
+  </defs>
+  
+  <!-- No background rectangle is drawn (transparent background) -->
+  
+  <!-- Logo Group -->
+  <g id="logo-group">
+    <!-- Rotating globe and grid -->
+    <g class="rotate">
+      <!-- Globe: black interior with white stroke -->
+      <circle cx="150" cy="150" r="120" fill="#000000" stroke="#ffffff" stroke-width="2"/>
+      <!-- Globe grid lines in white -->
+      <g stroke="#ffffff" stroke-width="1">
+        <ellipse cx="150" cy="150" rx="120" ry="60" fill="none"/>
+        <ellipse cx="150" cy="150" rx="100" ry="50" fill="none"/>
+        <ellipse cx="150" cy="150" rx="80" ry="40" fill="none"/>
+        <line x1="150" y1="30" x2="150" y2="270"/>
+        <line x1="30" y1="150" x2="270" y2="150"/>
+      </g>
+      <!-- Outer dashed orbit ring in white -->
+      <circle cx="150" cy="150" r="135" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="5,5"/>
+    </g>
+    
+    <!-- "MC" text centered inside the globe -->
+    <text class="logo-text" x="150" y="170" text-anchor="middle" font-size="72" font-weight="bold">
+      MC
+    </text>
+    
+    <!-- Brand name text rendered along the arc on the top half of the circle -->
+    <text class="brand-name" fill="url(#brandGradientBlack)">
+      <textPath href="#brandArcBlack" startOffset="50%" text-anchor="middle">
+        Mariska Creations
+      </textPath>
+    </text>
+    
+  </g>
+</svg>

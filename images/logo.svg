@@ -1,0 +1,23 @@
+<svg width="105" height="105" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globe Background with Thicker Lines -->
+  <g opacity="0.4"> <!-- Slightly increased opacity for better contrast -->
+    <circle cx="75" cy="75" r="70" fill="none" stroke="black" stroke-width="1.5"/> <!-- Thicker outline -->
+    <!-- Longitude Lines -->
+    <ellipse cx="75" cy="75" rx="70" ry="30" fill="none" stroke="black" stroke-width="1"/> <!-- Thicker lines -->
+    <ellipse cx="75" cy="75" rx="30" ry="70" fill="none" stroke="black" stroke-width="1"/> <!-- Thicker lines -->
+    <!-- Latitude Lines -->
+    <line x1="5" y1="75" x2="145" y2="75" stroke="black" stroke-width="1"/> <!-- Thicker lines -->
+    <line x1="75" y1="5" x2="75" y2="145" stroke="black" stroke-width="1"/> <!-- Thicker lines -->
+  </g>
+
+  <!-- "MARISKA" with Bolder Font and Underline -->
+  <line x1="48" y1="28" x2="102" y2="28" stroke="black" stroke-width="1.5"/> <!-- Underline -->
+  <text x="75" y="43" font-family="Roboto, Arial, sans-serif" font-size="12" fill="black" letter-spacing="1" font-weight="1000" text-anchor="middle">MARISKA</text> <!-- Extra bold text -->
+
+  <!-- Monogram "MC" in the Center (Unchanged) -->
+  <text x="75" y="90" font-family="Futura, Arial, sans-serif" font-size="35" font-weight="bold" fill="black" text-anchor="middle">MC</text>
+
+  <!-- "CREATIONS" with Bolder Font and Underline -->
+  <text x="75" y="118" font-family="Roboto, Arial, sans-serif" font-size="12" fill="black" letter-spacing="1" font-weight="1000" text-anchor="middle">CREATIONS</text> <!-- Extra bold text -->
+  <line x1="43" y1="123" x2="107" y2="123" stroke="black" stroke-width="1.5"/> <!-- Underline -->
+</svg>

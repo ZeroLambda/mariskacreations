@@ -1,0 +1,359 @@
+/* common.css */
+
+/* Define a central color palette using CSS custom properties */
+:root {
+  --primary-color:    #e91e63;  /* A bold pink */
+  /*--primary-color:    #ffeb3b; */  /* A bright yellow */
+  --secondary-color:  #ffffff;  /* White */
+  /* --secondary-color:  #ffeb3b;*/  /* A bright yellow */
+  --accent-color:     #00bcd4;  /* A cool cyan */
+  --text-color:       #212121;  /* Very dark gray */
+  --muted-text:       #757575;  /* Medium gray */
+  --background-color: #ffffff;  /* White */
+  --border-color:     #e0e0e0;  /* Light gray */
+  --footer-bg:        #424242;  /* Dark gray */
+  --footer-text:      #ffffff;  /* White */
+  --hover-color:      #c2185b;  /* Darker pink for hover */
+  /* Override CTA colors for this page (pink background) */
+  --cta-background: #ffffff;  /* White button for contrast */
+  --cta-text:       #e91e63;  /* Bold pink text */
+  --cta-hover:      #f8bbd0;  /* A soft pink for hover */
+}
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 80px;
+  background: var(--background-color);
+  /* background: black;  */ /* For black background testing */
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 70px;  /* Adjust the height as needed */
+  width: auto;
+  color: var(--primary-color);
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  /* Reduce header padding */
+  .header-container {
+    padding: 0.5rem 0;
+  }
+  /* Scale down the logo on small devices */
+  .logo-img {
+    height: 70px;
+    width: auto;
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  font-size: 1rem;
+  color: var(--text-color);
+  /* color: #ffffff; */ /* For black background testing */ 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--primary-color);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background: var(--primary-color);
+  margin: 4px 0;
+}
+
+/* Global Hero Section Styles */
+.hero-section {
+  padding-top: 200px;
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust this value as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Ensure the video covers the container and is cropped as needed */
+  object-fit: cover;
+  object-position: center; /* Change values like "center 30%" to shift vertically if desired */
+  z-index: 0;
+}
+
+/* Taken to individual pages for hero images */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1rem;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* Ensure the hero section always starts at the top when opened (for mobile overlay scenarios) */
+.hero-section:target {
+  scroll-margin-top: 0;
+}
+
+/* Full-screen overlay container */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-100%);
+  overflow-y: auto;
+  padding: 1rem 2rem;
+}
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-overlay li {
+  margin: 1rem 0;
+}
+
+.mobile-overlay a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-overlay a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive: Hide desktop nav on mobile */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.5rem;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li a {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-column ul li a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.footer-bottom form {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-bottom form input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: var(--hover-color);
+}
+
+.cta-button-pink-bg {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--cta-background);
+  color: var(--cta-text);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.cta-button-pink-bg:hover {
+  background: var(--cta-hover);
+}
+
+/* Utility class to disable background scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Main content spacing to account for fixed header */
+.main-content {
+  padding-top: 80px;
+}

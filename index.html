@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariska Creations - Home</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Home Page Specific Styles -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <!-- <div class="logo"> -->
+        <!-- Replace with your SVG file path or inline SVG code
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Mariska Creations Logo" class="logo-img">
+        </a> 
+      </div> -->
+      <a href="index.html">
+        <img src="images/mc_white_logo.svg" alt="Mariska Creations Logo" class="logo-img">
+      </a>       
+
+      <div class="logo">
+        <a href="index.html">Mariska Creations</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">Our Journey</a></li>
+          <li><a href="services.html">Offerings</a></li>
+          <li><a href="portfolio.html">Creations</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="contact.html">Connect</a></li>
+        </ul>
+        <!-- Hamburger Menu for Mobile -->
+        <div id="mobile-menu" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-overlay">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Our Journey</a></li>
+      <li><a href="services.html">Offerings</a></li>
+      <li><a href="portfolio.html">Creations</a></li>
+      <li><a href="blog.html">Insights</a></li>
+      <li><a href="contact.html">Connect</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+<!-- Hero Section -->
+<section class="hero-section">
+  <!-- Background Video with Fallback -->
+  <video class="hero-video" autoplay muted loop playsinline poster="images/hero-home.jpg">
+    <source src="videos/hero-video-bg-1.mp4" type="video/mp4">
+    <!-- Fallback: if the video isn’t supported, display an image -->
+    <img src="images/hero-home.jpg" alt="Hero Background">
+  </video>
+    <!-- <div class="hero-overlay"></div> -->
+    <div class="hero-content container">
+      <!-- <h1 class="hero-title">Crafting Visual Stories That Resonate</h1> -->
+      <!-- <p class="hero-subtitle">At Mariska Creations, we bring your brand to life with stunning designs.</p> -->
+      <!-- <a href="services.html" class="cta-button">Discover Our Work</a> -->
+    </div>
+  </section>
+  
+
+    <!-- About Preview Section -->
+    <section id="about-preview">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Mariska Creations is a full‑service creative studio established in 2010 in Chennai city, TN. We blend art and technology to craft visually stunning designs that tell your brand’s unique story.</p>
+        <a href="about.html" class="cta-button">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section id="services-preview">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Brand Identity</h3>
+            <p>Logo design, color palettes, and comprehensive brand guidelines that set your business apart.</p>
+          </div>
+          <div class="service-item">
+            <h3>Web & Mobile Design</h3>
+            <p>Responsive, modern designs that ensure your digital presence is striking and intuitive.</p>
+          </div>
+          <div class="service-item">
+            <h3>Print & Packaging</h3>
+            <p>Innovative print and packaging designs that leave a lasting impression.</p>
+          </div>
+          <div class="service-item">
+            <h3>Marketing Collateral</h3>
+            <p>Brochures, posters, and digital assets crafted to effectively communicate your message.</p>
+          </div>
+          <div class="service-item">
+            <h3>UI/UX Consulting</h3>
+            <p>Strategic consulting to optimize user experience and elevate digital products.</p>
+          </div>
+        </div>
+        <a href="services.html" class="cta-button">View All Services</a>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview Section -->
+    <section id="portfolio-preview">
+      <div class="container">
+        <h2>Our Portfolio</h2>
+        <p>Take a look at our creative projects that have redefined brands across industries.</p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="images/home-corp-iden-1.jpg" alt="Corporate Identity">
+            <h3>Corporate Identity</h3>
+          </div>
+          <div class="portfolio-item">
+            <img src="images/home-web-design-1.jpg" alt="Website Redesign">
+            <h3>Website Redesign</h3>
+          </div>
+          <div class="portfolio-item">
+            <img src="images/home-pack-inno-3.jpg" alt="Packaging Innovation">
+            <h3>Packaging Innovation</h3>
+          </div>
+        </div>
+        <a href="portfolio.html" class="cta-button">See More Projects</a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial-item">
+            <p>"Mariska Creations transformed our brand identity. Their creativity and dedication are unparalleled."</p>
+            <div class="testimonial-author">
+              <img src="images/team-girl-1.jpg" alt="Client Emily">
+              <h4>Emily R.</h4>
+              <span>CEO, Startup Co.</span>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <p>"Our website redesign led to a significant boost in user engagement. Truly a game-changer!"</p>
+            <div class="testimonial-author">
+              <img src="images/team-boy-3.jpg" alt="Client John">
+              <h4>John D.</h4>
+              <span>Marketing Director, Creative Inc.</span>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <p>"The innovative packaging solutions provided by Mariska Creations set our product apart from the competition."</p>
+            <div class="testimonial-author">
+              <img src="images/team-girl-3.jpg" alt="Client Sarah">
+              <h4>Sarah K.</h4>
+              <span>Brand Manager, Global Goods</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Clients Section -->
+    <section id="featured-clients">
+      <div class="container">
+        <h2>Featured Clients</h2>
+        <div class="clients-carousel">
+          <div class="client-logo"><img src="images/client-logo1.jpg" alt="Client Logo 1"></div>
+          <div class="client-logo"><img src="images/client-logo2.jpg" alt="Client Logo 2"></div>
+          <div class="client-logo"><img src="images/client-logo3.jpg" alt="Client Logo 3"></div>
+          <div class="client-logo"><img src="images/client-logo4.jpg" alt="Client Logo 4"></div>
+          <div class="client-logo"><img src="images/client-logo5.jpg" alt="Client Logo 5"></div>
+          <div class="client-logo"><img src="images/client-logo6.jpg" alt="Client Logo 6"></div>
+          <div class="client-logo"><img src="images/client-logo7.jpg" alt="Client Logo 7"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta">
+      <div class="container">
+        <h2>Let's Work Together</h2>
+        <p>Ready to elevate your brand with cutting-edge design? Let's start a conversation.</p>
+        <a href="contact.html" class="cta-button-pink-bg">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section id="newsletter">
+      <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest design insights and trends delivered straight to your inbox.</p>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit" class="cta-button">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Comprehensive Footer -->
+  <footer>
+    <div class="container footer-container">
+      <a href="index.html">
+        <img src="images/logo-white.svg" alt="Mariska Creations Logo" class="logo-img">
+      </a>
+      <div class="footer-top">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">Our Journey</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Brand Identity</a></li>
+            <li><a href="services.html">Web & Mobile Design</a></li>
+            <li><a href="services.html">Print & Packaging</a></li>
+            <li><a href="services.html">Marketing Collateral</a></li>
+            <li><a href="services.html">UI/UX Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="portfolio.html">Creations</a></li>
+            <li><a href="services.html">Offerings</a></li>
+            <li><a href="blog.html">Latest Insights</a></li>
+            <li><a href="contact.html">Let's Talk</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <ul class="social-links">
+            <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://dribbble.com/yourprofile" target="_blank"><i class="fab fa-dribbble"></i> Dribbble</a></li>
+            <li><a href="https://behance.net/yourprofile" target="_blank"><i class="fab fa-behance"></i> Behance</a></li>
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mariska Creations. All rights reserved.</p>
+        <form id="footer-newsletter">
+          <input type="email" placeholder="Subscribe to newsletter" required>
+          <button type="submit" class="cta-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

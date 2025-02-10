@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="370px" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the brand name (glossy metallic white effect) -->
+    <linearGradient id="brandGradientBlack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+    <!-- Expanded arc path so that the full text is visible -->
+    <path id="brandArcBlack" d="M 0,150 A 150,150 0 0,1 300,150" fill="none"/>
+  </defs>
+  
+  <!-- No background rectangle is drawn (transparent background) -->
+  
+  <!-- Globe Group -->
+  <g id="logo-group">
+    <!-- Globe Circle: Black interior with White stroke -->
+    <circle cx="150" cy="150" r="120" fill="#000000" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Globe Grid Lines in White -->
+    <g stroke="#ffffff" stroke-width="1">
+      <ellipse cx="150" cy="150" rx="120" ry="60" fill="none"/>
+      <ellipse cx="150" cy="150" rx="100" ry="50" fill="none"/>
+      <ellipse cx="150" cy="150" rx="80" ry="40" fill="none"/>
+      <line x1="150" y1="30" x2="150" y2="270"/>
+      <line x1="30" y1="150" x2="270" y2="150"/>
+    </g>
+    
+    <!-- Outer Dashed Orbit Ring in White -->
+    <circle cx="150" cy="150" r="135" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="5,5"/>
+    
+    <!-- "MC" Text Centered inside the Globe -->
+    <text x="150" y="170" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="72" font-weight="bold" fill="#e91e63">
+      MC
+    </text>
+  </g>
+  
+  <!-- Brand Name along the Arc at the Top of the Globe -->
+  <text font-family="Playfair Display, serif" font-weight="bold" font-size="48" fill="url(#brandGradientBlack)">
+    <textPath href="#brandArcBlack" startOffset="50%" text-anchor="middle" dy="12">
+      Mariska Creations
+    </textPath>
+  </text>
+</svg>

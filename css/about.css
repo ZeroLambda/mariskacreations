@@ -1,0 +1,232 @@
+/* about.css */
+
+/* From common.css - Didn't work - Commented in common.css */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/about-hero-bg-3.jpg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+/* About Hero Section */
+#about-hero {
+  padding: 120px 0 80px;
+  background: url('../images/about-hero.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: var(--background-color); /* Previously #fff */
+}
+#about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  /* Hero headings are white; if you prefer using a variable, you might define --hero-text-color */
+  color: var(--background-color);
+}
+#about-hero p {
+  font-size: 1.2rem;
+  /* Keeping the paragraph color white or use another variable if desired */
+  color: var(--background-color);
+}
+
+/* Our Story Section */
+#our-story {
+  padding: 60px 0;
+  background: var(--secondary-color); /* Previously #f7f7f7 */
+  text-align: center;
+}
+#our-story h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Previously #333 */
+}
+#our-story p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  color: var(--muted-text); /* Previously #555 */
+  font-size: 1rem;
+}
+#our-story img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+  padding: 60px 0;
+  background: var(--background-color); /* Previously #fff */
+  text-align: center;
+}
+#mission-vision h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Previously #333 */
+}
+.mission-vision-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.mission-vision-content .mission,
+.mission-vision-content .vision {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: var(--secondary-color); /* Previously #f7f7f7 */
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.mission-vision-content h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color); /* Previously #0073e6 */
+  margin-bottom: 0.5rem;
+}
+.mission-vision-content p {
+  color: var(--muted-text); /* Previously #555 */
+  font-size: 1rem;
+}
+
+/* Our Values Section */
+#our-values {
+  padding: 60px 0;
+  background: var(--secondary-color); /* Previously #f5f5f5 */
+  text-align: center;
+}
+#our-values h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Previously #333 */
+}
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.value-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: var(--background-color); /* Previously #fff */
+  padding: 1.5rem;
+  border: 1px solid var(--border-color); /* Previously #eee */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.value-item:hover {
+  transform: translateY(-5px);
+}
+.value-item .icon {
+  margin-bottom: 1rem;
+}
+.value-item h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color); /* Previously #0073e6 */
+  margin-bottom: 0.5rem;
+}
+.value-item p {
+  font-size: 0.95rem;
+  color: var(--muted-text); /* Previously #555 */
+}
+
+/* Our Team Section */
+#our-team {
+  padding: 60px 0;
+  background: var(--background-color); /* Previously #fff */
+  text-align: center;
+}
+#our-team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Previously #333 */
+}
+#our-team p {
+  color: var(--muted-text); /* Previously #555 */
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-member {
+  background: var(--secondary-color); /* Previously #f7f7f7 */
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team-member h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+}
+
+/* Awards Section */
+#awards {
+  padding: 60px 0;
+  background: var(--secondary-color); /* Previously #f7f7f7 */
+  text-align: center;
+}
+#awards h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.awards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.award-item {
+  flex: 1 1 200px;
+  max-width: 250px;
+  background: var(--background-color);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.award-item:hover {
+  transform: translateY(-5px);
+}
+.award-item i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.award-item h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.award-item p {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
