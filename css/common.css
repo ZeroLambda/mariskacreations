@@ -97,9 +97,13 @@ header {
     white-space: nowrap; /* Prevents text wrapping */
   }
 
+  .logo a {
+    font-size: 0.8rem;
+  }  
+
   /* Scale down the logo on small devices */
   .logo-img {
-    height: 50px;
+    height: 35px;
     width: auto;
   }
 }
