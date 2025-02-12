@@ -54,7 +54,6 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  justify-content: center;
 }
 
 .header-container {
@@ -62,6 +61,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo a {
@@ -88,6 +88,13 @@ header {
   /* Reduce header padding */
   .header-container {
     padding: 0.5rem 0;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+    white-space: nowrap; /* Prevents text wrapping */
   }
 
   /* Scale down the logo on small devices */
