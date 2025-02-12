@@ -87,7 +87,8 @@ header {
 @media (max-width: 640px) {
   /* Reduce header padding */
   .header-container {
-    padding: 0.5rem 0;
+    /* padding: 1rem 0; */
+    align-items: center;
   }
 
   .logo {
