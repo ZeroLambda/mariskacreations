@@ -98,12 +98,12 @@ header {
   }
 
   .logo a {
-    font-size: 0.8rem;
+    font-size: 1.0rem;
   }  
 
   /* Scale down the logo on small devices */
   .logo-img {
-    height: 35px;
+    height: 40px;
     width: auto;
   }
 }
