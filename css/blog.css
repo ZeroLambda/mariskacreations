@@ -68,6 +68,34 @@
   opacity: 1;
 }
 
+.slider-wrapper {
+  position: relative;
+}
+
+/* Manual Slider Controls */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--hero-text-color, #fff);
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.3s;
+}
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.prev-btn {
+  left: 1rem;
+}
+.next-btn {
+  right: 1rem;
+}
+
 /* Headings and text inside slides */
 .slide-content h3 {
   font-size: 1.5rem;

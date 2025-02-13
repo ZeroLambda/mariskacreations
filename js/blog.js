@@ -20,24 +20,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // Featured Articles Auto-Scroll Slider
+  // Featured Articles Slider with Manual Controls
   const slider = document.querySelector('.featured-slider');
   if (slider) {
-    let scrollAmount = 0;
-    const gap = 16; // Adjust based on your CSS gap (if using rems, convert accordingly)
-    // Calculate width of a slide (assuming all slides have same width)
-    const slideWidth = slider.querySelector('.featured-slide').offsetWidth + gap;
+    const slides = slider.querySelectorAll('.featured-slide');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
     
-    setInterval(() => {
-      scrollAmount += slideWidth;
-      // If we have scrolled past the end, reset to 0
-      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-        scrollAmount = 0;
-      }
+    function scrollToSlide(index) {
       slider.scrollTo({
-        left: scrollAmount,
+        left: slides[index].offsetLeft,
         behavior: 'smooth'
       });
-    }, 5000); // Change slide every 5 seconds
+    }
+    
+    // Initially, show the first slide
+    scrollToSlide(currentIndex);
+    
+    // Set up auto-scroll (optional)
+    let autoScrollInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      scrollToSlide(currentIndex);
+    }, 5000);
+    
+    // Pause auto-scroll when manual controls are used
+    function pauseAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+    
+    // Manual control: previous button
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        pauseAutoScroll();
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        scrollToSlide(currentIndex);
+      });
+      nextBtn.addEventListener('click', () => {
+        pauseAutoScroll();
+        currentIndex = (currentIndex + 1) % totalSlides;
+        scrollToSlide(currentIndex);
+      });
+    }
   }
 });
