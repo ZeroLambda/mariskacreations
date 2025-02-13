@@ -106,6 +106,84 @@
   color: var(--primary-color); /* Previously #0073e6 */
 }
 
+/* Featured Articles Slider Styles */
+.featured-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+}
+.featured-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.featured-slide {
+  flex: 0 0 80%;  /* Each slide takes up 80% of the container width */
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.featured-slide:hover {
+  transform: scale(1.02);
+}
+
+/* Slide image styling */
+.featured-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay for slide content */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  color: var(--hero-text-color, #fff);
+  padding: 1rem;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.featured-slide:hover .slide-content {
+  opacity: 1;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+/* Manual Slider Controls */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--hero-text-color, #fff);
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.3s;
+}
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.prev-btn {
+  left: 1rem;
+}
+.next-btn {
+  right: 1rem;
+}
+
 /* Testimonials Section */
 #testimonials {
   padding: 60px 0;
