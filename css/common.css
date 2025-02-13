@@ -46,14 +46,15 @@ body {
 header {
   width: 100%;
   height: 80px;
-  /* background: var(--background-color); */
-  background: #1b1b1b;
+  background: var(--background-color);
   /* background: black;  */ /* For black background testing */
   border-bottom: 1px solid var(--border-color);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-container {
@@ -65,14 +66,18 @@ header {
 }
 
 .logo a {
-  font-size: 1.5rem;
+  position: relative;
+  left: -80px;
+  font-size: 2.0rem;
   font-weight: bold;
   color: var(--primary-color);
   text-decoration: none;
 }
 
 .logo-img {
-  height: 50px;  /* Adjust the height as needed */
+  position: relative;
+  bottom: 10px;
+  height: 60px;  /* Adjust the height as needed */
   width: auto;
   color: var(--primary-color);
   max-width: 100%;
@@ -80,7 +85,7 @@ header {
 }
 
 .logo-img:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 /* Responsive adjustments */
@@ -98,13 +103,21 @@ header {
     white-space: nowrap; /* Prevents text wrapping */
   }
 
+  .logo-img:hover {
+    transform: scale(1.2);
+  }
+
   .logo a {
-    font-size: 1.0rem;
+    position: relative;
+    left: -30px;
+    font-size: 2.0rem;
   }  
 
   /* Scale down the logo on small devices */
   .logo-img {
-    height: 40px;
+    position: relative;
+    bottom: 10px;
+    height: 60px;
     width: auto;
   }
 }
@@ -120,8 +133,8 @@ header {
 }
 .nav-links li a {
   font-size: 1rem;
-  /* color: var(--text-color); */
-  color: #ffffff; /* For black background testing */ 
+  color: var(--text-color);
+  /* color: #ffffff; */ /* For black background testing */ 
   text-decoration: none;
   transition: color 0.3s;
 }
