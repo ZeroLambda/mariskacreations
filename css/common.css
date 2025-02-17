@@ -286,6 +286,29 @@ header {
   color: var(--primary-color);
 }
 
+/* Close Button for Mobile Overlay */
+.close-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary-color, #e91e63); /* Pink (you can adjust the variable or fallback) */
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close-overlay:hover {
+  background: #c2185b; /* Darker pink for hover */
+  transform: scale(1.1);
+}
+
 /* Responsive: Hide desktop nav on mobile */
 @media (max-width: 1024px) {
   .nav-links {

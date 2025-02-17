@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('mobile-menu');
     const overlay = document.querySelector('.mobile-overlay');
+    const closeBtn = document.querySelector('.close-overlay');
   
     hamburgerBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -29,5 +30,30 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('no-scroll');
       }
     });
+
+  // Close overlay when clicking outside menu items
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+
+  // Close overlay when clicking the close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  }
+
+  // Close overlay when Escape key is pressed
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      overlay.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+  });    
+    
   });
   
