@@ -1,0 +1,237 @@
+/* offerings.css */
+
+/* From common.css - Didn't work - Commented in common.css */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/services-hero-bg-1.jpg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+/* offerings Hero Section */
+#services-hero {
+  padding: 100px 0 80px;
+  background: url('../images/services-hero.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: var(--hero-text-color, #fff); /* Use hero-text-color variable with fallback */
+}
+#services-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--hero-text-color, #fff);
+}
+#services-hero p {
+  font-size: 1.2rem;
+  color: var(--hero-text-color, #fff);
+}
+
+/* offerings Overview Section */
+#services-overview {
+  padding: 60px 0;
+  background: var(--background-color); /* White background */
+  text-align: center;
+}
+#services-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.service-item p {
+  color: var(--muted-text);
+}
+
+/* Our Process Section */
+#our-process {
+  padding: 60px 0;
+  background: var(--secondary-color);
+  text-align: center;
+}
+#our-process h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+#our-process p {
+  color: var(--muted-text);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.process-step {
+  flex: 1 1 200px;
+  max-width: 250px;
+  background: var(--background-color);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.process-step:hover {
+  transform: translateY(-5px);
+}
+.process-step .step-icon {
+  margin-bottom: 1rem;
+}
+.process-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.process-step p {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+/* Benefits Section */
+#benefits {
+  padding: 60px 0;
+  background: var(--background-color);
+  text-align: center;
+}
+#benefits h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+#benefits p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: var(--muted-text);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.benefit-item {
+  background: var(--secondary-color);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.benefit-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.benefit-item p {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+/* Portfolio Gallery Section */
+#portfolio-gallery {
+  padding: 60px 0;
+  background: var(--secondary-color);  /* Replaces #f7f7f7 */
+  text-align: center;
+}
+#portfolio-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);             /* Replaces #333 */
+}
+#portfolio-gallery p {
+  font-size: 1rem;
+  color: var(--muted-text);             /* Replaces #555 */
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.portfolio-item {
+  background: var(--background-color);  /* Replaces #fff */
+  border: 1px solid var(--border-color);  /* Replaces #eee */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+.portfolio-item img {
+  width: 100%;
+  display: block;
+}
+.portfolio-item h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);           /* Replaces #0073e6 */
+  margin: 1rem 0 0.5rem;
+}
+.portfolio-item p {
+  font-size: 0.95rem;
+  color: var(--muted-text);              /* Replaces #555 */
+  padding: 0 1rem 1rem;
+}
+
+/* Call-to-Action Section */
+#cta-services {
+  padding: 60px 0;
+  background: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+}
+#cta-services h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#cta-services p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 640px) {
+  #services-hero h1 {
+    font-size: 2.2rem;
+  }
+  .service-card h3, .process-step h3, .benefit-item h3 {
+    font-size: 1.2rem;
+  }
+  .service-card p, .process-step p, .benefit-item p {
+    font-size: 0.85rem;
+  }
+}
